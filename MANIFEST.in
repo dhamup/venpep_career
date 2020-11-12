@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include venpep *.css
+recursive-include venpep *.csv
+recursive-include venpep *.html
+recursive-include venpep *.ico
+recursive-include venpep *.js
+recursive-include venpep *.json
+recursive-include venpep *.md
+recursive-include venpep *.png
+recursive-include venpep *.py
+recursive-include venpep *.svg
+recursive-include venpep *.txt
+recursive-exclude venpep *.pyc

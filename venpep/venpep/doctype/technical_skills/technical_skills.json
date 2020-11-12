@@ -1,0 +1,29 @@
+{
+ "creation": "2020-10-05 11:47:06.068287",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "skills"
+ ],
+ "fields": [
+  {
+   "fieldname": "skills",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Skills",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-10-05 11:47:07.708449",
+ "modified_by": "Administrator",
+ "module": "Venpep",
+ "name": "Technical Skills",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

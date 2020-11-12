@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Job Details</title>
+  <link rel="shortcut icon" href="assets/venpep/image/favicon.ico" type="image/x-icon">
+  <!-- Bootstrap , fonts & icons  -->
+  <link rel="stylesheet" href="assets/venpep/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/venpep/fonts/icon-font/css/style.css">
+  <link rel="stylesheet" href="assets/venpep/fonts/typography-font/typo.css">
+  <link rel="stylesheet" href="assets/venpep/fonts/fontawesome-5/css/all.css">
+  <!-- Plugin'stylesheets  -->
+  <link rel="stylesheet" href="assets/venpep/plugins/aos/aos.min.css">
+  <link rel="stylesheet" href="assets/venpep/plugins/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="assets/venpep/plugins/nice-select/nice-select.min.css">
+  <link rel="stylesheet" href="assets/venpep/plugins/slick/slick.min.css">
+  <link rel="stylesheet" href="assets/venpep/plugins/ui-range-slider/jquery-ui.css">
+  <!-- Vendor stylesheets  -->
+  <link rel="stylesheet" href="assets/venpep/css/main.css">
+  <!-- Custom stylesheet -->
+  <style type="text/css">
+    .h-px-60 {
+      height: 60px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-wrapper overflow-hidden ">
+    <!-- Header Area -->
+    <header class="site-header site-header--menu-right bg-default position-fixed py-7 py-xs-0 site-header--absolute site-header--sticky">
+      <div class="container">
+        <nav class="navbar site-navbar offcanvas-active navbar-expand-lg  px-0 py-0">
+          <!-- Brand Logo-->
+          <div class="brand-logo">
+            <a href="/">
+              <!-- light version logo (logo must be black)-->
+              <img src="assets/venpep/image/venpep_Logo_ISK_270816_v3.png" width="200" height="75" alt="" class="light-version-logo default-logo">
+              <!-- Dark version logo (logo must be White)-->
+              <img src="assets/venpep/image/venpep_Logo_ISK_270816_v3.png" width="200" height="75" alt="" class="dark-version-logo">
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="mobile-menu">
+            <div class="navbar-nav-wrapper">
+              <ul class="navbar-nav main-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/why-join-us">Why Join Us</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/job-opportunities">Current Openings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.venpep.com" target="_blank">Visit Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Mobile Menu Hamburger-->
+          <button class="navbar-toggler btn-close-off-canvas  hamburger-icon border-0" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <i class="icon icon-simple-remove icon-close"></i> -->
+            <span class="hamburger hamburger--squeeze js-hamburger">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+            </span>
+            </span>
+          </button>
+          <!--/.Mobile Menu Hamburger Ends-->
+        </nav>
+      </div>
+    </header>
+    <!-- navbar- -->
+    <!-- jobDetails-section -->
+    <div class="jobDetails-section bg-default-1 pt-28 pt-lg-27 pb-xl-25 pb-12" style="background-image: url('assets/venpep/image/lecture-dark.jpg');">
+      <div class="container">
+        <div class="row justify-content-center">
+          <!-- back Button -->
+          <div class="col-xl-10 col-lg-11 mt-4 ml-xxl-32 ml-xl-15 dark-mode-texts">
+            <div class="mb-9">
+              <a class="d-flex align-items-center ml-4" href="/job-opportunities"> <i
+              class="icon icon-small-left bg-white circle-40 mr-5 font-size-7 text-black font-weight-bold shadow-8">
+            </i><span class="text-uppercase font-size-3 font-weight-bold text-white">Back to Current Openings</span></a>
+            </div>
+          </div>
+          <!-- back Button End -->
+          <div class="col-xl-9 col-lg-11 mb-8 px-xxl-15 px-xl-0">
+            <div class="bg-white rounded-4 border border-mercury shadow-9">
+              <!-- Single Featured Job -->
+              <div class="pt-9 pl-sm-9 pl-5 pr-sm-9 pr-5 pb-8 border-bottom border-width-1 border-default-color light-mode-texts">
+                <div class="row">
+                  <div class="col-md-6">
+                    <!-- media start -->
+                    <div class="media align-items-center">
+                      <!-- media texts start -->
+                      <div>
+                        <h3 class="font-size-6 mb-0" id="job_name"></h3>
+                        <input type="hidden" name="create_date" id="create_date">
+                        <!-- <span class="font-size-3 text-gray line-height-2">AirBnb</span> -->
+                      </div>
+                      <!-- media texts end -->
+                    </div>
+                    <!-- media end -->
+                  </div>
+                  <div class="col-md-6 text-right pt-7 pt-md-0 mt-md-n1">
+                    <!-- media date start -->
+                    <div class="media justify-content-md-end">
+                      <p class="font-size-4 text-gray mb-0" id="job_date"></p>
+                    </div>
+                    <!-- media date end -->
+                  </div>
+                </div>
+                <div class="row pt-9">
+                  <div class="col-12">
+                    <!-- card-btn-group start -->
+                    <div class="card-btn-group">
+                      <a class="btn btn-green text-uppercase btn-medium rounded-3 w-180 mr-4 mb-5" href="javacript:" data-toggle="modal" data-target="#login">APPLY NOW</a>
+                    </div>
+                    <!-- card-btn-group end -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Single Featured Job -->
+              <div class="job-details-content pt-8 pl-sm-9 pl-6 pr-sm-9 pr-6 pb-10 light-mode-texts">
+                <div class="row">
+                  <div class="col-xl-11 col-md-12 pr-xxl-9 pr-xl-10 pr-lg-20">
+                    <div class="">
+                      <p class="mb-4 font-size-4 text-gray" id="job_describe"></p>
+                    </div>
+                    <div class="tags">
+                      <p class="font-size-4 text-gray mb-3"><b>Technical Skill</b></p>
+                      <ul class="d-flex list-unstyled flex-wrap pr-sm-25 pr-md-0" id="skill_sets">
+                      </ul>
+                    </div>
+                    <div class="">
+                      <a class="btn btn-green text-uppercase btn-medium w-180 h-px-48 rounded-3 mr-4 mt-6" href="javacript:" data-toggle="modal" data-target="#login">APPLY NOW</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade form-modal" id="login" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog max-width-px-840 position-relative">
+        <button type="button" class="circle-32 btn-reset bg-white pos-abs-tr mt-md-n6 mr-lg-n6 focus-reset z-index-supper" data-dismiss="modal"><i class="fas fa-times"></i></button>
+        <div class="login-modal-main bg-white rounded-8 overflow-hidden">
+          <div class="row no-gutters">
+            <div class="col-lg-5 col-md-6">
+              <div class="pt-10 pb-6 pl-11 pr-12 h-100 d-flex flex-column dark-mode-texts" style="background-image: url('assets/venpep/image/lecture-dark.jpg');">
+                <div class="pb-9">
+                  <h3 class="font-size-8 text-white line-height-reset pb-4 line-height-1p4" id="job_title_val">
+                  </h3>
+                </div>
+                <div class="form-group" id="hide_job_title">
+                  <input type="hidden" name="job_title" id="job_title" class="form-control">
+                </div>
+                <div class="form-group" id="hide_file_name">
+                  <input type="hidden" name="filename" id="filename" class="form-control">
+                </div>
+                <div class="form-group" id="hide_file_data" style="display: none">
+                  <textarea name="filedata" id="filedata" class="form-control h-px-144" style="visibility: hidden;"></textarea>
+                </div>
+                <div class="border-top border-default-color-2 mt-auto">
+                  <div class="d-flex mx-n9 pt-6 flex-xs-row flex-column">
+                    <div class="pt-5 px-9">
+                      <h3 class="font-size-7 text-white">
+                      </h3>
+                      <p class="font-size-3 text-white gr-opacity-5 line-height-1p4">@Venpep Solutions</p>
+                    </div>
+                    <div class="pt-5 px-9">
+                      <h3 class="font-size-7 text-white">
+                      </h3>
+                      <p class="font-size-3 text-white gr-opacity-5 line-height-1p4"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 col-md-6">
+              <form id="basic-form" method="POST" action="javascript:;" onsubmit="return submitting_form(this);">
+              	<div class="bg-white-2 h-100 px-11 pt-11 pb-7">
+                  	<div class="form-group">
+                  		<label for="applicant_name" class="font-size-4 text-black-2 font-weight-semibold line-height-reset">Full Name <span style="color:red">*</span></label>
+                  		<input type="text" class="form-control" name="applicant_name" id="applicant_name" placeholder="Enter Your Full Name" autocomplete="off">
+                  	</div>
+                  	<div class="form-group">
+                  		<label for="email_id" class="font-size-4 text-black-2 font-weight-semibold line-height-reset">Email Address <span style="color:red">*</span></label>
+                  		<input type="text" class="form-control" name="email_id" id="email_id" placeholder="Enter Your Email Address" autocomplete="off">
+                  	</div>
+                  	<div class="form-group">
+                  		<label for="contact_number" class="font-size-4 text-black-2 font-weight-semibold line-height-reset">Contact Number <span style="color:red">*</span></label>
+                  		<input type="text" class="form-control" name="contact_number" id="contact_number" placeholder="Enter Your Contact Number" autocomplete="off" maxlength="10">
+              		</div>
+              		<div class="form-group">
+              			<label for="message" class="font-size-4 text-black-2 font-weight-semibold line-height-reset">Cover Letter <span style="color:red">*</span></label>
+                  		<textarea name="cover_letter" id="cover_letter" placeholder="Enter Cover Letter Here..." class="form-control h-px-144"></textarea>
+              		</div>
+          			<div class="form-group">
+          				<label for="resume" class="font-size-4 text-black-2 font-weight-semibold line-height-reset">Resume <span style="color:red">*</span></label>
+                  		<input type="file" name="resume_attachment" id="resume_attachment" class="form-control h-px-60">
+          			</div>
+          			<div class="form-group" id="msg"></div>
+                  <div class="form-group mb-8">
+                    <button class="btn btn-primary btn-medium w-100 rounded-5 text-uppercase" id="btnSubmit">Submit</button>
+                  </div>
+              	</div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer area function start -->
+    <!-- cta section -->
+    <footer class="footer bg-ebony-clay dark-mode-texts">
+      <div class="container  pt-12 pt-lg-19 pb-10 pb-lg-19">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mb-lg-0 mb-9">
+            <!-- footer logo start -->
+            <img src="assets/venpep/image/venpep_logo.png" alt="" class="footer-logo mb-14">
+            <!-- footer logo End -->
+            <!-- media start -->
+            <div class="media mb-11">
+              <img src="assets/venpep/image/l1/png/message.png" class="align-self-center mr-3" alt="">
+              <div class="media-body pl-5">
+                <p class="mb-0 font-size-4 text-white">Email Us</p>
+                <a class="mb-0 font-size-4 font-weight-bold" href="mailto:sales@venpep.com">hr@venpep.com</a>
+              </div>
+              <div class="media-body pl-5">
+                <p class="mb-0 font-size-4 text-white">Call Us</p>
+                <a class="mb-0 font-size-4 font-weight-bold">+91 422 4379440</a>
+              </div>
+            </div>
+            <!-- media start -->
+            <!-- widget social icon start -->
+            <div class="social-icons">
+              <ul class="pl-0 list-unstyled d-flex align-items-end ">
+                <li class="d-flex flex-column justify-content-center px-3 mr-3 font-size-4 heading-default-color">Follow us on:</li>
+                <li class="d-flex flex-column justify-content-center px-3 mr-3"><a href="https://www.facebook.com/VenPepSolutions" target="_blank" class="hover-color-primary heading-default-color"><i class="fab fa-facebook-f font-size-3 pt-2"></i></a></li>
+                <li class="d-flex flex-column justify-content-center px-3 mr-3"><a href="https://twitter.com/venpepsol" target="_blank" class="hover-color-primary heading-default-color"><i class="fab fa-twitter font-size-3 pt-2"></i></a></li>
+                <li class="d-flex flex-column justify-content-center px-3 mr-3"><a href="https://www.linkedin.com/company/venpep-solutions-pvt-ltd?trk=company_name" target="_blank" class="hover-color-primary heading-default-color"><i class="fab fa-linkedin-in font-size-3 pt-2"></i></a></li>
+              </ul>
+            </div>
+            <!-- widget social icon end -->
+          </div>
+          <div class="col-lg-8 col-md-6">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-3 col-xs-6">
+                <div class="footer-widget widget2 mb-md-0 mb-13">
+                  <!-- footer widget title start -->
+                  <p class="widget-title font-size-4 text-gray mb-md-8 mb-7">Menu</p>
+                  <!-- widget social menu start -->
+                  <ul class="widget-links pl-0 list-unstyled list-hover-primary">
+                    <li class="mb-6"><a class="heading-default-color font-size-4 font-weight-normal" href="/">Home</a></li>
+                    <li class="mb-6"><a class="heading-default-color font-size-4 font-weight-normal" href="/why-join-us">Why Join Us</a></li>
+                    <li class="mb-6"><a class="heading-default-color font-size-4 font-weight-normal" href="/job-opportunities">Current Openings</a></li>
+                    <li class="mb-6"><a class="heading-default-color font-size-4 font-weight-normal" href="https://www.venpep.com" target="_blank">Visit Us</a></li>
+                  </ul>
+                  <!-- widget social menu end -->
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                <div class="footer-widget widget2 mb-md-0 mb-13">
+                  <!-- footer widget title start -->
+                  <p class="widget-title font-size-4 text-gray mb-md-8 mb-7">About</p>
+                  <!-- widget social menu start -->
+                  <p class="heading-default-color font-size-4 font-weight-normal">VenPep Solutions Private Limited - Venture for the people - has been established to identify profitable white spaces in the International consumer markets and to enter these markets using suitable technology business solutions and GTM strategies.</p>
+                  <!-- widget social menu end -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer area function end -->
+  </div>
+  <!-- Vendor Scripts -->
+  <script src="assets/venpep/js/vendor.min.js"></script>
+  <!-- Plugin's Scripts -->
+  <script src="assets/venpep/plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="assets/venpep/plugins/nice-select/jquery.nice-select.min.js"></script>
+  <script src="assets/venpep/plugins/aos/aos.min.js"></script>
+  <script src="assets/venpep/plugins/slick/slick.min.js"></script>
+  <script src="assets/venpep/plugins/counter-up/jquery.counterup.min.js"></script>
+  <script src="assets/venpep/plugins/counter-up/jquery.waypoints.min.js"></script>
+  <script src="assets/venpep/plugins/ui-range-slider/jquery-ui.js"></script>
+  <!-- Activation Script -->
+  <!-- <script src="js/drag-n-drop.js"></script> -->
+  <script src="assets/venpep/js/custom.js"></script>
+  <script src="assets/venpep/js/jquery.validate.min.js"></script>
+  <script type="text/javascript">
+  	$( document ).ready(function() {
+      	const queryString = window.location.search;
+      	const urlParams = new URLSearchParams(queryString);
+      	const page_type = urlParams.get('title')
+      	$("#job_title").val(page_type);
+        var page_type_Val = page_type.replace(/-/g, ' ');
+        var page_type_Val = page_type_Val.toUpperCase();
+        $("#job_title_val").html(page_type_Val);
+      	$.ajax({
+        	method: "GET",
+        	url: 'http://143.110.188.151/api/resource/Job Opening/'+page_type,
+        	contentType: 'application/json; charset=utf-8',
+        	success: function(datas) {
+        		var content = "";
+        		for(i=0; i<JSON.stringify(datas.data["skills"].length); i++){
+        			content += '<li class="bg-regent-opacity-15 mr-3 h-px-33 text-center flex-all-center rounded-3 px-5 font-size-3 text-black-2 mt-2">'+datas.data["skills"][i]["skills"]+'</li>'
+        		}
+        		$("#skill_sets").html(content);
+        		var job_title = JSON.stringify(datas.data["job_title"]);
+        		var job_date = JSON.stringify(datas.data["creation"]);
+        		var job_description = JSON.stringify(datas.data["description"]);
+        		var job_description_rep = job_description.replace(/"/g, '');
+        		var job_date_split = job_date.split(" ");
+        		var job_date_rep = job_date_split[0].replace(/"/g, '');
+            $("#create_date").val(job_date_rep);
+        		var job_date_for = job_date_rep.split("-");
+        		var job_title_rep = job_title.replace(/[^a-zA-Z ]/g, "");
+        		$("#job_name").html(job_title_rep);
+        		$("#job_date").html(job_date_for[2]+'-'+job_date_for[1]+'-'+job_date_for[0]);
+        		$("#job_describe").html(job_description_rep);
+		  	}
+      	});
+	  	$("#hide_file_data").css("display", "block");
+      	$('input[type="file"]').change(function(e){
+        	var fileName = e.target.files[0].name;
+        	$("#filename").val(fileName);
+      	});
+      	$("#basic-form").validate({
+		    rules: {
+		      applicant_name : {
+		        required: true,
+		        minlength: 3
+		      },
+		      contact_number: {
+		        required: true,
+		        number: true,
+		      },
+		      email_id: {
+		        required: true,
+		        email: true
+		      },
+		      cover_letter : {
+		        required: true,
+		      },
+		      resume_attachment : {
+		        required: true,
+		      },
+		    },
+		    messages : {
+		      applicant_name: {
+		      	required: "Please enter your Name",
+		        minlength: "Name should be at least 3 characters"
+		      },
+		      contact_number: {
+		        required: "Please enter your Contact Number",
+		        number: "Please enter your Number as a numerical value"
+		      },
+		      email_id: {
+		      	required: "Please enter your Valid Email Address",
+		        email: "The email should be in the format: abc@example.com"
+		      },
+		      cover_letter: {
+		      	required: "Please enter your Cover Letter"
+		      },
+		      resume_attachment: {
+		      	required: "Please Attach your Resume"
+		      },
+		    },
+	  	});
+    });
+  </script>
+  <script type="text/javascript">
+    function submitting_form(){
+    	if ($("#basic-form").valid()) {
+        $("#btnSubmit").hide();
+        $("#msg").html('<div class="alert alert-success"><i class="fa fa-spin fa-spinner"></i> Submitting...!</div>');
+  			var applicant_name = $("#applicant_name").val();
+  			var email_id = $("#email_id").val();
+  			var contact_number = $("#contact_number").val();
+  			var cover_letter = $("#cover_letter").val();
+  			var job_title = $("#job_title").val();
+  			var resume_attachment = $("#resume_attachment").val();
+  			var filedata = $("#filedata").val();
+  			var filename = $("#filename").val();
+  			var apiKey = "69be1c7ea6e4aa1";
+  			var apiSecret = "7c2755c5631c448";
+        var post_date = $("#create_date").val();
+        $.ajax({
+          url : 'http://143.110.188.151/api/resource/Job Applicant?filters=[["job_title", "=", "'+job_title+'"],["creation", ">=", "'+post_date+'"]]',
+          type: 'GET',
+          contentType: 'application/json',
+          headers : {
+              Authorization: "token " + apiKey + ":" + apiSecret,
+          },
+          success: function(results){
+            console.log(results);
+            var res_length = JSON.stringify(results.data.length);
+            var post_length = parseInt(res_length) + 1;
+            $.ajax({
+              url : "http://143.110.188.151/api/resource/Job Opening/"+job_title,
+              type: 'PUT',
+              dataType: 'text',
+              contentType: 'application/json',
+              headers : {
+                Authorization: "token " + apiKey + ":" + apiSecret,
+              },
+              data : JSON.stringify({
+                  applicant_count : post_length,
+              }),
+            });
+          },
+        });
+		    $.ajax({
+		        url : "http://143.110.188.151/api/resource/Job Applicant",
+		        type: 'POST',
+		        contentType: 'application/json',
+		        headers : {
+	          	Authorization: "token " + apiKey + ":" + apiSecret,
+		        },
+		        data : JSON.stringify({
+		          	applicant_name : applicant_name,
+		          	email_id : email_id,
+		          	job_title : job_title,
+		          	contact_number : contact_number,
+		          	cover_letter : cover_letter,
+		        }),
+		        success: function(data){
+		          	var doc_type = JSON.stringify(data.data["doctype"]);
+		          	var doc_type = doc_type.replace(/"/g, '');
+		          	var doc_name = JSON.stringify(data.data["name"]);
+		          	var doc_name = doc_name.replace(/"/g, '');
+		          	$.ajax({
+		            	url : "http://143.110.188.151/api/method/uploadfile",
+		            	type: 'PUT',
+		            	dataType: 'text',
+		            	contentType: 'application/json',
+		            	headers : {
+		              		Authorization: "token " + apiKey + ":" + apiSecret,
+	            		},
+		            	data : JSON.stringify({
+		              		cmd : 'uploadfile',
+		              		doctype : doc_type,
+		              		docname : doc_name,
+		              		filename : filename,
+		              		filedata : filedata,
+		              		from_form : '1'
+		            	}),
+	            		success: function(results){
+	              		console.log(results);
+	              		location.reload();
+		            	},
+		          	});
+		        },
+		        error: function(error){
+		          	console.log(error);
+		        }
+	      	});
+		}
+    }
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+      	document.getElementById('resume_attachment').addEventListener('change', handleFileSelect, false);
+
+    } else {
+      	alert('The File APIs are not fully supported in this browser.');
+    }
+    function handleFileSelect(evt) {
+    	$("#msg").html('<div class="alert alert-info"><i class="fa fa-spin fa-spinner"></i> Please wait...!</div>');
+    	$("#btnSubmit").hide();
+      	var f = evt.target.files[0];
+      	var reader = new FileReader();
+      	reader.onload = (function(theFile) {
+        	return function(e) {
+          		var binaryData = e.target.result;
+          		var base64String = window.btoa(binaryData);
+          		$("#filedata").val(base64String);
+          		$("#msg").html('');
+          		$("#btnSubmit").show();
+        	};
+      	})(f);
+      	reader.readAsBinaryString(f);
+    }
+  </script>
+</body>
+</html>
